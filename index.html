@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación 02 - Maquetación Avanzada OnePage</title>
+    <link rel="stylesheet" href="estilo01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- ================= CABECERA ================= -->
+    <header>
+        <nav class="nav-horizontal">
+            <div class="logo">
+                <i class="fa-solid fa-code"></i> WebApp.io
+            </div>
+            <ul class="nav-links">
+                <li><a href="#seccion1"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                <li><a href="#seccion2"><i class="fa-solid fa-layer-group"></i> Servicios</a></li>
+                <li><a href="#seccion3"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menú Vertical Lateral Complementario con Iconos -->
+    <aside>
+        <ul class="nav-vertical-lateral">
+            <li><a href="#seccion1"><i class="fa-solid fa-house"></i><span>INI</span></a></li>
+            <li><a href="#seccion2"><i class="fa-solid fa-layer-group"></i><span>SRV</span></a></li>
+            <li><a href="#seccion3"><i class="fa-solid fa-envelope"></i><span>CON</span></a></li>
+        </ul>
+    </aside>
+
+    <!-- ================= CUERPO (ONEPAGE) ================= -->
+    <main>
+        <!-- Sección 1: Inicio / Presentación -->
+        <section id="seccion1">
+            <div class="hero-content">
+                <h1>Diseño y Maquetación Web Avanzada</h1>
+                <p>Construimos experiencias digitales modernas, minimalistas y optimizadas utilizando estándares semánticos de última generación.</p>
+                
+                <!-- Imagen con aspect-ratio y object-fit -->
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Banner Principal WebApp" class="hero-banner">
+                
+                <!-- Botón con icono de FontAwesome -->
+                <a href="#seccion2" class="btn-cta">
+                    <i class="fa-solid fa-arrow-down"></i> Explorar Servicios
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección 2: Servicios / Propuesta de Valor -->
+        <section id="seccion2">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones profesionales adaptadas a las exigencias del mercado digital actual con interacción avanzada.</p>
+            </div>
+            
+            <div class="cards-container">
+                <!-- Tarjeta 1 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Interfaz UI/UX">
+                    <h3>Interfaz UI/UX</h3>
+                    <p>Diseño de interfaces centradas en el usuario, prototipos interactivos y wireframes de alta fidelidad.</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Desarrollo Front-End">
+                    <h3>Desarrollo Front-End</h3>
+                    <p>Maquetación web semántica y responsive utilizando buenas prácticas en HTML5, CSS3 y JavaScript moderno.</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Optimización SEO">
+                    <h3>Optimización & SEO</h3>
+                    <p>Mejora del rendimiento técnico, accesibilidad web y posicionamiento orgánico en motores de búsqueda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Contacto Directo -->
+        <section id="seccion3">
+            <div class="section-header">
+                <h2>Contacto Directo</h2>
+                <p>¿Tienes un proyecto en mente? Escríbenos y nos pondremos en contacto contigo a la brevedad.</p>
+            </div>
+
+            <div class="contact-box">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nombre"><i class="fa-solid fa-user"></i> Nombre Completo</label>
+                        <input type="text" id="nombre" class="form-control" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo"><i class="fa-solid fa-at"></i> Correo Electrónico</label>
+                        <input type="email" id="correo" class="form-control" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje"><i class="fa-solid fa-comment-dots"></i> Mensaje</label>
+                        <textarea id="mensaje" class="form-control" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-cta" style="width: 100%; border: none; cursor: pointer; justify-content: center;">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+                <br>
+                <p class="secondary-note">Tus datos están protegidos bajo estrictas normas de privacidad y confidencialidad.</p>
+            </div>
+        </section>
+    </main>
+
+   <!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+    <footer>
+        <div class="footer-content">
+            <!-- Iconos de Redes Sociales -->
+            <ul class="social-links">
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+
+            <ul class="footer-links">
+                <li><a href="#seccion1">Política de Privacidad</a></li>
+                <li><a href="#seccion2">Términos de Servicio</a></li>
+                <li><a href="#seccion3">Soporte Técnico</a></li>
+            </ul>
+
+            <p class="footer-copy">&copy; 2026 WebApp.io - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

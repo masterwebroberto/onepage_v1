@@ -1,0 +1,380 @@
+/* ==========================================
+           1. VARIABLES CSS (:root)
+           ================================---------- */
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #3b82f6;
+            --accent-color: #60a5fa;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --transition-speed: 300ms;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ==========================================
+           2. ESTILOS GLOBALES Y RESET
+           ================================---------- */
+        html {
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ==========================================
+           3. CABECERA (HEADER) Y MENÚS
+           ================================---------- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Menú Horizontal Superior */
+        .nav-horizontal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Menú Vertical Lateral Complementario (Fijo/Relative) */
+        .nav-vertical-lateral {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(5px);
+            padding: 1.2rem 0.6rem;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-vertical-lateral a {
+            color: var(--white);
+            font-size: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            opacity: 0.7;
+        }
+
+        .nav-vertical-lateral a i {
+            font-size: 1rem;
+        }
+
+        .nav-vertical-lateral a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        /* ==========================================
+           4. ESTRUCTURA ONEPAGE Y SECCIONES
+           ================================---------- */
+        section {
+            min-height: 100vh;
+            padding: 6rem 2rem 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sección 1: Inicio / Presentación (Hero) */
+        #seccion1 {
+            text-align: center;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-banner {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .btn-cta {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        /* Sección 2: Servicios / Propuesta de Valor (Grid Minimalista) */
+        #seccion2 {
+            text-align: center;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+            max-width: 700px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            flex: 1 1 300px;
+            max-width: 350px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all var(--transition-speed) ease-in-out;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            filter: grayscale(100%);
+            transition: filter var(--transition-speed) ease-in-out;
+        }
+
+        .card:hover img {
+            filter: grayscale(0%);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Sección 3: Contacto Directo / Panel Simplificado */
+        #seccion3 {
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: var(--font-main);
+            outline: none;
+            transition: border-color var(--transition-speed) ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--secondary-color);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Control estricto de opacidad para elementos secundarios */
+        .secondary-note {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            opacity: 0.8;
+            transition: opacity var(--transition-speed) ease;
+        }
+
+        .secondary-note:hover {
+            opacity: 1;
+        }
+
+        /* ==========================================
+           5. PIE DE PÁGINA (FOOTER)
+           ================================---------- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        /* Iconos de Redes Sociales */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.4rem;
+            transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            opacity: 0.8;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--accent-color);
+            transition: opacity var(--transition-speed) ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-copy {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            opacity: 0.7;
+        }
